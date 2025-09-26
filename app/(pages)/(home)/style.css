@@ -1,0 +1,75 @@
+.curve-bottom {
+  clip-path: ellipse(3000px 1080px at 50% 0);
+}
+.section-title {
+  @apply text-center;
+}
+
+.card {
+  @apply relative;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0px 10px 60px rgba(38, 45, 118, 0.08);
+  .card-icon {
+    @apply absolute;
+    transform: translate(-50%, -50%);
+    top: 0;
+    left: 50%;
+  }
+  .card-title {
+    @apply mt-[8rem];
+  }
+}
+.absolute-center {
+  @apply absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.bg-image {
+  border-radius: var(--radius-2xl);
+  filter: brightness(0.5);
+}
+
+@keyframes appear-left {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+
+@keyframes appear {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0%);
+    opacity: 1;
+  }
+}
+.animation-right,
+.animation-left {
+  /* animation-duration: 5s; */
+  /* animation-iteration-count: infinite; */
+
+  /*animation-timeline: view();*/
+  /*animation-range: entry 0 corver 40%;*/
+}
+.animation-right {
+  animation-name: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0;
+  /* animation-duration: 5s;
+    animation-iteration-count: infinite; */
+}
+
+.animation-left {
+  animation: appear linear;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
