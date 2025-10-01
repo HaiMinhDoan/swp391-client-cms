@@ -18,7 +18,9 @@
     "hooks": "@/hooks",
     "extensions": "@/extensions",
     "common": "@/common",
-    "services": "@/services"
+    "services": "@/services",
+    "icons": "@/icons",
+    "layout": "@/layout"
   },
   "registries": {}
 }
